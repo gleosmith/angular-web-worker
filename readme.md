@@ -250,7 +250,7 @@ export class AppComponent implements OnInit {
 | Name            | Description                               | Type      | Default |
 | --------------- | ----------------------------------------- | --------- | ------: |
 | get             | whether `WorkerClient.get()` can be used  | boolean   | true    |
-| set             | whether `WorkerClient.get()` can be used  | boolean   | true    |
+| set             | whether `WorkerClient.set()` can be used  | boolean   | true    |
 | shallowTransfer | if the prototype is copied                | boolean   | false   |
 
 *Example*
@@ -338,7 +338,7 @@ When a RxJS subject property in a worker is decorated with `@Subscribable()` a c
 
 The client's subscribe method returns a promise with the subsription, which can be unsubscribed from before the worker is terminated. However, it is not advisable to unsubscribe from the subscription with the normal `Subscription.unsubscribe()` approach. This is because two subscriptions are actually created, one within the Angular app and one within the worker script. Therefore, in order to release resources within the worker the `WorkerClient.unsubscribe(subscription)` method should be used.
 
-If there is no need to unsubscribe from the subscription before the worker is terminated, simply terminating the worker with the `WorkerClient.destroy()` method will properly disposable of the subscriptions.
+If there is no need to unsubscribe from the subscription before the worker is terminated, simply terminating the worker with the `WorkerClient.destroy()` method will properly dispose of the subscriptions.
 
 *app.worker.ts*
 ```typescript
