@@ -59,7 +59,7 @@ import { AppWorker } from './app.worker';
 export class AppModule { }
 ```
 ## The WorkerClient
-Once the defintion/s have been imported into a module the WorkerManager service can be used to create new clients which have the functionality to create, communicate with and terminate workers throughout the angular application. While the client calls the worker class directly, all data is still serialized. Therefore when any class/object is sent to and/or recieved from a worker the data is copied and it's functions/methods will not be transfered. Circular referencing data structures are not serializable. For more on web workers see [here](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+Once the defintion/s have been imported into a module the WorkerManager service can be used to create new clients which have the functionality to create, communicate with and terminate workers throughout the angular application. While it seems as if the client calls the worker class directly, the standard postMessage and onmessage communication mechanism is still used under the hood therefore all data is still serialized. Therefore when any class/object is sent to and/or recieved from a worker the data is copied and it's functions/methods will not be transfered. Circular referencing data structures are not serializable. For more on web workers see [here](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 
 *app.component.ts*
 ```typescript
