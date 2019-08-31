@@ -1,0 +1,35 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "downlevelIteration": true,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "paths": {
+      "angular-web-worker": [
+        "./worker/src/public-api.ts"
+      ],
+      "angular-web-worker/angular": [
+        "./angular/src/public-api.ts"
+      ],
+      "angular-web-worker/common": [
+        "./common/src/public-api.ts"
+      ],
+      "angular-web-worker/*": [
+        "./dist/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules", "dist"
+  ]
+}

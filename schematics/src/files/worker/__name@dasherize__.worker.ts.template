@@ -1,0 +1,14 @@
+import { AngularWebWorker, bootstrapWorker, OnWorkerInit } from 'angular-web-worker';
+/// <reference lib="webworker" />
+
+@AngularWebWorker()
+export class <%= classify(name) %>Worker implements OnWorkerInit {
+
+    constructor() {}
+
+    onWorkerInit() {
+
+    }
+
+}
+bootstrapWorker(<%= classify(name) %>Worker);

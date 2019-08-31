@@ -1,0 +1,9 @@
+{
+  "schematics": {
+    "angular-web-worker": {
+      "description": "A blank schematic.",
+      "schema": "./src/schema.json",
+      "factory": "./src/index"
+    }
+  }
+}
