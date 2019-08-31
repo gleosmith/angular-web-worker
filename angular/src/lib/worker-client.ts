@@ -148,9 +148,12 @@ export class WorkerClient<T> {
             resolve: (resp) => {
                 const metaData = WorkerUtils.getAnnotation<AccessableMetaData[]>(this.definition.worker, WorkerAnnotations.Accessables).filter(x => x.name === resp.propertyName)[0];
                 if (metaData.shallowTransfer) {
-                    if (metaData.type.prototype && resp.result) {
-                        resp.result.__proto__ = metaData.type.prototype;
+                    if (metaData.type) {
+                        if (metaData.type.prototype && resp.result) {
+                            resp.result.__proto__ = metaData.type.prototype;
+                        }
                     }
+
                 }
                 return resp.result;
             }
