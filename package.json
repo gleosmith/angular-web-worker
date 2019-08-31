@@ -1,6 +1,6 @@
 {
   "name": "angular-web-worker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library to assist with web worker communication in Angular apps",
   "main": "y",
   "scripts": {
@@ -11,7 +11,7 @@
     "remove:schematics": "rimraf ./dist/schematics",
     "build": "npm run build:pkg && npm run build:schematics "
   },
-  "schematics": "./schematics/src/collection.json",
+  "schematics": "./schematics/collection.json",
   "author": { 
     "name" : "Gavin Leo-Smith", 
     "email" : "gavin@gleo-smith.co.za"
