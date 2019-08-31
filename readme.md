@@ -246,6 +246,7 @@ export class AppComponent implements OnInit {
 ```
 
 **Decorator Options:** *all options are optional*
+
 | Name            | Description                               | Type      | Default |
 | --------------- | ----------------------------------------- | --------- | ------: |
 | get             | whether `WorkerClient.get()` can be used  | boolean   | true    |
@@ -316,6 +317,7 @@ export class AppComponent implements OnInit {
 }
 ```
 **Decorator Options:** *all options are optional*
+
 | Name            | Description                                       | Type      | Default |
 | --------------- | ------------------------------------------------- | --------- | ------: |
 | shallowTransfer | if the prototype of the returned value is copied  | boolean   | false   |
