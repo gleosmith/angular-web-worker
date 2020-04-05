@@ -158,15 +158,8 @@ export class WorkerController<T> {
     async handleCallable(request: WorkerRequestEvent<WorkerEvents.Callable>) {
         let response: WorkerResponseEvent<any>;
         try {
-            const metaData = WorkerUtils.getAnnotation<CallableMetaData[]>(this.workerClass, WorkerAnnotations.Callables);
             request.body.arguments = this.applyShallowTransferToCallableArgs(request, request.body.arguments);
-            let result: any;
-
-            if (metaData.filter(x => x.name === request.propertyName)[0].returnType === Promise) {
-                result = await this.worker[request.propertyName](...request.body.arguments);
-            } else {
-                result = this.worker[request.propertyName](...request.body.arguments);
-            }
+            const result = await this.worker[request.propertyName](...request.body.arguments);
 
             response = this.response(WorkerEvents.Callable, request, result);
         } catch (e) {
