@@ -32,6 +32,7 @@ export class ClientWebWorker<T> implements Worker {
         };
         this.controller = new WorkerController(workerType, this.messageBus);
     }
+    onmessageerror: (this: Worker, ev: MessageEvent<any>) => any;
 
     /**
      * Returns instance of worker class

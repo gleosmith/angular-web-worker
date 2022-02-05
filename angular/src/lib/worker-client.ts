@@ -354,7 +354,7 @@ export class WorkerClient<T> {
         type: EventType,
         opts: WorkerClientRequestOpts<T, EventType, ReturnType>
     ): ReturnType extends Promise<any> ? ReturnType : Promise<ReturnType> {
-        const promise = new Promise((resolve, reject) => {
+        const promise = new Promise<void>((resolve, reject) => {
             if (this._isConnected || opts.isConnect) {
                 try {
                     const noProperty = opts.workerProperty === undefined;

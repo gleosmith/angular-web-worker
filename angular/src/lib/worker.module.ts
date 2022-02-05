@@ -26,7 +26,7 @@ export class WorkerModule {
      *  ])
      * ]
     */
-    static forWorkers(workerDefinitions: WorkerDefinition[]): ModuleWithProviders {
+    static forWorkers(workerDefinitions: WorkerDefinition[]): ModuleWithProviders<WorkerModule> {
 
         workerDefinitions.forEach((definition) => {
             if (!WorkerUtils.getAnnotation(definition.worker, WorkerAnnotations.IsWorker)) {

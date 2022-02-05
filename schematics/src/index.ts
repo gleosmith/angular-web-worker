@@ -1,13 +1,13 @@
-import { JsonParseMode, dirname, join, normalize, parseJsonAst, strings } from '@angular-devkit/core';
+import { dirname, join, normalize, strings } from '@angular-devkit/core';
+import * as jsoncparser from 'jsonc-parser';
 import {
   Rule, SchematicContext, SchematicsException, Tree,
   apply, applyTemplates, chain, mergeWith, move, noop, url,
 } from '@angular-devkit/schematics';
-import {  findPropertyInAstObject } from '@schematics/angular/utility/json-utils';
 import { parseName } from '@schematics/angular/utility/parse-name';
 import { relativePathToWorkspaceRoot } from '@schematics/angular/utility/paths';
 import { buildDefaultPath, getWorkspace, updateWorkspace } from '@schematics/angular/utility/workspace';
-import { BrowserBuilderOptions, LintBuilderOptions } from '@schematics/angular/utility/workspace-models';
+import { BrowserBuilderOptions } from '@schematics/angular/utility/workspace-models';
 import { WebWorkerSchema } from './schema';
 
 // modified from '@schematics/angular/web-worker'
@@ -33,12 +33,12 @@ export function checkForTsConfigWorkerExclusion(tree: Tree, tsConfigPath: string
   const buffer = tree.read(tsConfigPath);
 
   if (buffer) {
-      const tsCfgAst = parseJsonAst(buffer.toString(), JsonParseMode.Loose);
-      if (tsCfgAst.kind != 'object') {
+      const treeNode = jsoncparser.parseTree(buffer.toString());
+      if (!treeNode || treeNode.type !== 'object') {
           throw new SchematicsException('Invalid tsconfig. Was expecting an object');
       }
-      const filesAstNode = findPropertyInAstObject(tsCfgAst, 'exclude');
-      if (filesAstNode && filesAstNode.kind != 'array') {
+      const filesAstNode = jsoncparser.findNodeAtLocation(treeNode, ['compilerOptions', 'exclude']);
+      if (filesAstNode && filesAstNode.type !== 'array') {
           throw new SchematicsException('Invalid tsconfig "exclude" property; expected an array.');
       }
 
@@ -87,15 +87,10 @@ export default function (options: WebWorkerSchema): Rule {
     options.path = parsedPath.path;
     const root = project.root || '';
     const needWebWorkerConfig = !projectTargetOptions.webWorkerTsConfig;
- 
+
     if (needWebWorkerConfig) {
       const workerConfigPath = join(normalize(root), 'tsconfig.worker.json');
       projectTargetOptions.webWorkerTsConfig = workerConfigPath;
-      const lintTarget = project.targets.get('lint');
-      if (lintTarget) {
-        const lintOptions = (lintTarget.options || {}) as unknown as LintBuilderOptions;
-        lintOptions.tsConfig = (lintOptions.tsConfig || []).concat(workerConfigPath);
-      }
     }
 
     checkForTsConfigWorkerExclusion(tree, projectTargetOptions.tsConfig)
@@ -112,5 +107,5 @@ export default function (options: WebWorkerSchema): Rule {
       mergeWith(templateSource)
     ]);
 
-  }
+  };
 }
