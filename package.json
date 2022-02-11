@@ -12,9 +12,9 @@
     "build": "npm run build:pkg && npm run build:schematics"
   },
   "schematics": "./schematics/collection.json",
-  "author": { 
-    "name" : "Gavin Leo-Smith", 
-    "email" : "gavin@gleo-smith.co.za"
+  "author": {
+    "name": "Gavin Leo-Smith",
+    "email": "gavin@gleo-smith.co.za"
   },
   "license": "MIT",
   "keywords": [
@@ -23,52 +23,53 @@
     "web worker",
     "typescript"
   ],
-
   "bugs": {
     "url": "https://github.com/gleosmith/angular-web-worker/issues"
   },
   "homepage": "https://github.com/gleosmith/angular-web-worker#readme",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/gleosmith/angular-web-worker.git"
+    "type": "git",
+    "url": "https://github.com/gleosmith/angular-web-worker.git"
   },
   "peerDependencies": {
-    "reflect-metadata": "^0.1.13",
-    "@angular/core": "~8.0.0"
+    "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "@angular-devkit/core": "^8.0.0",
-    "@angular-devkit/schematics": "^8.0.0",
-    "@angular/common": "^8.0.0",
-    "@angular/compiler": "^8.0.0",
-    "@angular/compiler-cli": "^8.0.0",
-    "@angular/core": "~8.0.0",
-    "@angular/platform-browser": "^8.0.0",
-    "@angular/platform-browser-dynamic": "^8.0.0",
-    "@schematics/angular": "^8.0.0",
+    "@angular-devkit/core": "^13.2.2",
+    "@angular-devkit/schematics": "^13.2.2",
+    "@angular/common": "^13.2.1",
+    "@angular/compiler": "^13.2.1",
+    "@angular/compiler-cli": "^13.2.1",
+    "@angular/core": "^13.2.1",
+    "@angular/platform-browser": "^13.2.1",
+    "@angular/platform-browser-dynamic": "^13.2.1",
+    "@schematics/angular": "^13.2.2",
     "@types/jasmine": "^3.3.16",
     "@types/sinon": "^7.0.13",
     "copyfiles": "^2.1.1",
     "core-js": "^3.1.4",
-    "jasmine-core": "~2.99.1",
-    "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~3.1.1",
+    "jasmine-core": "~4.0.0",
+    "jasmine-spec-reporter": "~7.0.0",
+    "jsonc-parser": "^3.0.0",
+    "karma": "^6.3.15",
     "karma-chrome-launcher": "~2.2.0",
     "karma-cli": "^2.0.0",
-    "karma-coverage-istanbul-reporter": "~2.0.1",
-    "karma-jasmine": "~1.1.2",
-    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-coverage-istanbul-reporter": "^3.0.3",
+    "karma-jasmine": "^4.0.1",
+    "karma-jasmine-html-reporter": "^1.7.0",
     "karma-sourcemap-loader": "^0.3.7",
-    "karma-typescript": "^4.1.1",
-    "karma-webpack": "^4.0.2",
-    "ng-packagr": "^5.1.0",
-    "rimraf": "^2.6.3",
-    "ts-loader": "^6.0.4",
-    "ts-node": "~7.0.0",
+    "karma-typescript": "^5.0.0",
+    "karma-webpack": "^5.0.0",
+    "ng-packagr": "^13.2.1",
+    "rimraf": "^3.0.2",
+    "rxjs": "^7.5.2",
+    "ts-loader": "^9.2.6",
+    "ts-node": "^10.4.0",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
-    "tslint": "^5.11.0",
-    "typescript": "3.4.3",
-    "webpack": "^4.38.0",
-    "zone.js": "^0.10.0"
+    "tslib": "^2.0.0",
+    "tslint": "^6.1.3",
+    "typescript": "4.5.5",
+    "webpack": "^5.68.0",
+    "zone.js": "^0.11.4"
   }
 }

@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema",
-    "id": "angular-web-worker-schema",
+    "$id": "angular-web-worker-schema",
     "title": "Schema for angular-web-worker options ",
     "type": "object",
     "description": "Creates a new angular-web-worker",
