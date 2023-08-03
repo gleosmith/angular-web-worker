@@ -3,6 +3,6 @@
     "dest": "./dist",
     "deleteDestPath": true,
     "lib": {
-      "entryFile": "worker/src/public-api.ts"
+      "entryFile": "src/lib/index.ts"
     }
-  }
+}

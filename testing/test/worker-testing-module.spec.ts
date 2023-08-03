@@ -1,4 +1,4 @@
-import { AngularWebWorker } from './../../worker/src/public-api';
+import { AngularWebWorker } from '../../src/lib/worker/public-api';
 import { WorkerTestingModule } from './../src/public-api';
 import { TestBed } from '@angular/core/testing';
 import { WorkerManager } from 'angular-web-worker/angular';

@@ -1,6 +1,6 @@
 import { WorkerTestingManager, createTestManager } from '../src/lib/worker-testing-manager';
 import { WorkerTestingClient } from 'testing/src/public-api';
-import { AngularWebWorker } from '../../worker/src/lib/web-worker-decorator';
+import { AngularWebWorker } from '../../src/lib/worker/web-worker-decorator';
 
 @AngularWebWorker()
 class TestClass {
