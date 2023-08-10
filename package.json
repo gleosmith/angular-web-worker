@@ -1,20 +1,12 @@
 {
-  "name": "@michriko/angular-web-worker",
-  "version": "1.0.5",
+  "name": "@wbds/angular-web-worker",
+  "version": "15.2.2",
   "description": "Library to assist with web worker communication in Angular apps",
   "main": "y",
   "scripts": {
     "test": "karma start karma.conf.js",
     "build:pkg": "ts-node package-script.ts --force",
-    "build:schematics": "npm run remove:schematics && tsc -p src/schematics/tsconfig.schematics.json && npm run move:schematics",
-    "move:schematics": "copyfiles -f  src/schematics/package.json ./dist/schematics && copyfiles -f  src/schematics/collection.json ./dist/schematics && copyfiles -u 3 src/schematics/src/files/**/*.* ./dist/schematics/src/files/ && copyfiles -f ./schematics/src/schema.json ./dist/schematics/src ",
-    "remove:schematics": "rimraf ./dist/schematics",
     "build": "npm run build:pkg"
-  },
-  "schematics": "./schematics/collection.json",
-  "author": {
-    "name": "Gavin Leo-Smith",
-    "email": "gavin@gleo-smith.co.za"
   },
   "license": "MIT",
   "keywords": [
@@ -23,13 +15,10 @@
     "web worker",
     "typescript"
   ],
-  "bugs": {
-    "url": "https://github.com/gleosmith/angular-web-worker/issues"
-  },
-  "homepage": "https://github.com/gleosmith/angular-web-worker#readme",
+  "homepage": "https://github.com/weisenburger-bau-GmbH/angular-web-worker/#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gleosmith/angular-web-worker.git"
+    "url": "https://github.com/weisenburger-bau-GmbH/angular-web-worker.git"
   },
   "peerDependencies": {
     "reflect-metadata": "^0.1.13"
