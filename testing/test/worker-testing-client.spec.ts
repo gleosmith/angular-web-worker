@@ -1,4 +1,4 @@
-import { AngularWebWorker } from '../../worker/src/public-api';
+import { AngularWebWorker } from '../../src/lib/worker/public-api';
 import { WorkerTestingClient, createTestClient } from 'testing/src/public-api';
 
 @AngularWebWorker()
