@@ -5,7 +5,7 @@ Schematics from the original package are not supported at the moment.
 
 # Getting Started
 
-### 1. Use an existing, or create a new Angular (v15+) app
+### 1. Use an existing, or create a new Angular (v17+) app
 
 ### 2. Install the library
 
@@ -18,7 +18,7 @@ An example web worker could look like this:
 
 *app.worker.ts*
 ```typescript
-import { AngularWebWorker, bootstrapWorker, OnWorkerInit } from '@wbds/angular-web-worker';
+import { AngularWebWorker, bootstrapWorker, OnWorkerInit } from '@wbds/angular-web-worker/web-worker';
 /// <reference lib="webworker" />
 
 @AngularWebWorker()
@@ -73,9 +73,9 @@ import { WorkerManager, WorkerClient } from '@wbds/angular-web-worker';
 })
 export class AppComponent implements OnInit {
 
-  private client: WorkerClient<AppWorker>;
+  private readonly client: WorkerClient<AppWorker>;
 
-  constructor(private workerManager: WorkerManager) { }
+  constructor(private readonly workerManager: WorkerManager) { }
 
   ngOnInit() {
     if (this.workerManager.isBrowserCompatible) {
@@ -102,7 +102,7 @@ Any logic or initialization of variables in the constructor of the worker class 
 
 *app.worker.ts*
 ```typescript
-import { AngularWebWorker, bootstrapWorker, OnWorkerInit } from '@wbds/angular-web-worker';
+import { AngularWebWorker, bootstrapWorker, OnWorkerInit } from '@wbds/angular-web-worker/web-worker';
 import { Subject } from 'rxjs';
 /// <reference lib="webworker" />
 
