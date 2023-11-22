@@ -1,9 +1,9 @@
 import { Subject, Subscription } from 'rxjs';
-import {WebWorkerType} from '../common/worker-types';
-import {WorkerUtils} from '../common/worker-utils';
-import {AccessableMetaData, ShallowTransferParamMetaData, WorkerAnnotations} from '../common/annotations';
-import {WorkerMessageBus} from '../common/message-bus';
-import {WorkerEvent, WorkerEvents, WorkerObservableMessage, WorkerObservableMessageTypes, WorkerRequestEvent, WorkerResponseEvent} from '../common/worker-events';
+import {WebWorkerType} from './common/worker-types';
+import {WorkerUtils} from './common/worker-utils';
+import {AccessableMetaData, ShallowTransferParamMetaData, WorkerAnnotations} from './common/annotations';
+import {WorkerMessageBus} from './common/message-bus';
+import {WorkerEvent, WorkerEvents, WorkerObservableMessage, WorkerObservableMessageTypes, WorkerRequestEvent, WorkerResponseEvent} from './common/worker-events';
 /**
  * Handles communication to and from a `WorkerClient` and triggers work with the worker class.
  */

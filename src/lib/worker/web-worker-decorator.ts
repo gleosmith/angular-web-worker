@@ -2,9 +2,9 @@
 /*
 * Collection of factory functions for the factory as attached to a single object which allows for testing of imported function
 */
-import {AccessableMetaData, SubscribableMetaData, WorkerAnnotations, WorkerConfig} from '../common/annotations';
-import {WorkerUtils} from '../common/worker-utils';
-import {SecretResult, WorkerEvents} from '../common/worker-events';
+import {AccessableMetaData, SubscribableMetaData, WorkerAnnotations, WorkerConfig} from './common/annotations';
+import {WorkerUtils} from './common/worker-utils';
+import {SecretResult, WorkerEvents} from './common/worker-events';
 
 export interface WorkerFactoryFunctionsDict {
     /*

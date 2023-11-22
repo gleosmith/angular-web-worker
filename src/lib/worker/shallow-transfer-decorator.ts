@@ -1,5 +1,5 @@
-import {ShallowTransferParamMetaData, WorkerAnnotations} from '../common/annotations';
-import {WorkerUtils} from '../common/worker-utils';
+import {ShallowTransferParamMetaData, WorkerAnnotations} from './common/annotations';
+import {WorkerUtils} from './common/worker-utils';
 
 /**
  * Transfers the decorated argument's prototype when it is serialized and unserialized when the method is called from `WorkerClient.call()`. This will only have an effect if

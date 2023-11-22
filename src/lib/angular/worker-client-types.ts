@@ -1,5 +1,5 @@
 import { Subject, Subscription, Observable } from 'rxjs';
-import {SecretResult, WorkerAccessableBody, WorkerCallableBody, WorkerEvents, WorkerResponseEvent, WorkerSubscribableBody} from '../common/worker-events';
+import {SecretResult, WorkerAccessableBody, WorkerCallableBody, WorkerEvents, WorkerResponseEvent, WorkerSubscribableBody} from '../common';
 
 /**
  * A dictionary of client observables that have been created to listen to events trigger by RxJS subjects in the worker.

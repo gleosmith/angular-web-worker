@@ -1,6 +1,6 @@
 import 'reflect-metadata';
-import {WorkerUtils} from '../common/worker-utils';
-import {AccessableMetaData, WorkerAnnotations} from '../common/annotations';
+import {WorkerUtils} from './common/worker-utils';
+import {AccessableMetaData, WorkerAnnotations} from './common/annotations';
 
 /**
  * Configurable options for the `@Accessable()` decorator, defining how the decorated property can be interacted with from a `WorkerClient`.

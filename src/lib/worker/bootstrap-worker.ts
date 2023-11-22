@@ -1,7 +1,7 @@
 
 import { WorkerController } from './worker-controller';
-import {WebWorkerType} from '../common/worker-types';
-import {WorkerMessageBus} from '../common/message-bus';
+import {WebWorkerType} from './common/worker-types';
+import {WorkerMessageBus} from './common/message-bus';
 
 /**
  * Bootstraps the worker class when a new worker script is created in the browser. The class must be decorated with `@AngularWebWorker()`

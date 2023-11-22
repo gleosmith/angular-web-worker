@@ -1,7 +1,7 @@
 import 'reflect-metadata';
-import {CallableMetaData, WorkerAnnotations, WorkerConfig} from '../common/annotations';
-import {WorkerUtils} from '../common/worker-utils';
-import {SecretResult, WorkerEvents} from '../common/worker-events';
+import {CallableMetaData, WorkerAnnotations, WorkerConfig} from './common/annotations';
+import {WorkerUtils} from './common/worker-utils';
+import {SecretResult, WorkerEvents} from './common/worker-events';
 
 /**
  * Configurable options for the `@Callable()` decorator, defining how the decorated method is called from a `WorkerClient`.

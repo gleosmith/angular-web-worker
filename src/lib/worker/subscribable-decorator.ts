@@ -1,7 +1,7 @@
 import 'reflect-metadata';
-import {ObservablesOnly} from '../common/worker-types';
-import {SubscribableMetaData, WorkerAnnotations} from '../common/annotations';
-import {WorkerUtils} from '../common/worker-utils';
+import {ObservablesOnly} from './common/worker-types';
+import {SubscribableMetaData, WorkerAnnotations} from './common/annotations';
+import {WorkerUtils} from './common/worker-utils';
 
 /**
  * Allows the decorated worker property to be subscribed to, or observed through the `WorkerClient.subscribe()` and `WorkerClient.observe()` methods.

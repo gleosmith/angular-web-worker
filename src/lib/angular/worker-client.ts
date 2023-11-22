@@ -2,7 +2,7 @@ import {Observable, Subject, Subscription} from 'rxjs';
 import {WorkerClientObservablesDict, WorkerClientRequestOpts} from './worker-client-types';
 import {WorkerDefinition} from './worker.module';
 import {ClientWebWorker} from './client-web-worker';
-import {SecretResult, WorkerEvent, WorkerEvents, WorkerObservableMessage, WorkerObservableMessageTypes, WorkerRequestEvent, WorkerResponseEvent} from '../common/worker-events';
+import {SecretResult, WorkerEvent, WorkerEvents, WorkerObservableMessage, WorkerObservableMessageTypes, WorkerRequestEvent, WorkerResponseEvent} from '../common';
 import {AccessableMetaData, CallableMetaData, FunctionsOnly, NonObservablesOnly, ObservablesOnly, WorkerAnnotations, WorkerObservableType, WorkerUtils} from '../common';
 
 

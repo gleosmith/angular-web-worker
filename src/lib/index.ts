@@ -1,3 +1,2 @@
-export * from './worker';
 export * from './angular';
-export * from './common';
+export * from './worker/common';
